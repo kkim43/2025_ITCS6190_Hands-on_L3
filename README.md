@@ -39,7 +39,7 @@ psql -d postgres -U postgres
 ### 3. Build a Python Web App with Docker Compose in code environments 
 
 #### a. Define application dependencies in requirements.txt
-``` txt
+``` dockerfile
 flask
 redis
 ```
