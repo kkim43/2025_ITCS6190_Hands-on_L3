@@ -1,10 +1,18 @@
 # 2025_ITCS6190_Hands-on_L3
 
-## 1. Docker Verify Installation
+# Result (Screentshot.pdf)
+[View Screenshot (PDF)](./screenshot.pdf)
+
+# My Reflections
+This was my first time trying deployment with Docker. 
+Compared to manually installing Python and libraries with pip, I found the process much simpler and more convenient. 
+Through this hands-on, I was able to understand how Docker makes setting up and running applications easier.
+
+### 1. Docker Verify Installation
 ``` bash
 docker -v
 ```
-## 2. PostgreSQL Setup with Docker
+### 2. PostgreSQL Setup with Docker
 
 #### a. Pull the PostgreSQL image
 ``` bash
@@ -26,11 +34,13 @@ docker exec -it postgres1 bash
 psql -d postgres -U postgres
 ```
 
-## 3. Build a Python Web App with Docker Compose in code environments 
+### 3. Build a Python Web App with Docker Compose in code environments 
 
 #### a. Define application dependencies in requirements.txt
+``` txt
 flask
 redis
+```
 
 #### b. Define the application in app.py
 ``` python
@@ -58,6 +68,7 @@ def hello():
     count = get_hit_count()
     return 'Hello World! I have been seen {}\ntimes.\n'.format(count)
 ```
+
 #### c. Create a Dockerfile to containerize the application. Use the following template:
 ```
 FROM python:3.7-alpine
@@ -85,8 +96,10 @@ services:
   redis:
     image: "redis:alpine"
 ```
+
 #### e. Build and run the application
 ``` bash
 docker compose up
 ```
+
 #### f. Open the application in a browser at: http://localhost:8000
