@@ -1,12 +1,14 @@
 # 2025_ITCS6190_Hands-on_L3
 
-# Result (Screentshot.pdf)
+## Result (Screentshot.pdf)
 [View Screenshot (PDF)](./screenshot.pdf)
 
-# My Reflections
+## My Reflections
 This was my first time trying deployment with Docker. 
 Compared to manually installing Python and libraries with pip, I found the process much simpler and more convenient. 
 Through this hands-on, I was able to understand how Docker makes setting up and running applications easier.
+
+## Execution steps
 
 ### 1. Docker Verify Installation
 ``` bash
